@@ -34,13 +34,21 @@ function displayGifs(){
         console.log(response);
 
         for (var i = 0; i < 10; i++){
+
+            var gifDiv = $("<div>");
+            gifDiv.addClass("gifDiv");
+            var rating = response.data[i].rating;
+            var p = $("<p>").text("Rating: " + rating);
             var gif = $("<img>");
             gif.addClass("gifs");
             gif.attr("src", response.data[i].images.fixed_height_still.url);
             gif.attr("data-still", response.data[i].images.fixed_height_still.url);
             gif.attr("data-animate", response.data[i].images.fixed_height.url);
             gif.attr("data-state", "still");
-            $("#Gif-view").append(gif);
+
+            gifDiv.append(p);
+            gifDiv.append(gif);
+            $("#Gif-view").append(gifDiv);
         }
 
         
@@ -69,7 +77,7 @@ $("#add-button").on("click", function(event){
 
     //prevent default behavior of button i.e. submitting the form
     event.preventDefault();
-    
+
     // clear the container to prevent repetitive buttons
     $("#button-view").empty();
 

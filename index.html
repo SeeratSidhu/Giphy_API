@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <title>My Giphy Gifs</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div id="button-view"></div>
+        <!-- Form to input topic for Giphy search -->
+        <form id="topic-form">
+            <label for="topic-input">Add a TV-show</label>
+            <input type="text" id="topic-input"> <br>
+             <!-- Button to add new button -->
+             <input type="submit" id="add-button" value="Submit">
+             
+        </form>
+
+        <div id="Gif-view"></div>
+    </div>
+
+
+    <script type="text/javascript" src="Javascript/app.js"></script>
 </body>
 </html>

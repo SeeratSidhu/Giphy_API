@@ -25,7 +25,7 @@ function displayGifs(){
     var name = $(this).attr("data-name");
     // var new_name = name.split(" ").join("+");
     //console.log(new_name);
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&limit=10&offset=0&api_key=dc6zaTOxFJmzC";
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&limit=10&offset=0&api_key=PjPRRiWQbZu0MklEhimGwJZ7onkUegwL";
 
     $.ajax({
         url: queryURL,
